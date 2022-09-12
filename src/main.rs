@@ -1,5 +1,5 @@
-//! The key manager for the Cipher ParaTime.
-use cipher_keymanager::trusted_policy_signers;
+//! The key manager ParaTime.
+use keymanager::trusted_policy_signers;
 use oasis_core_keymanager_lib::keymanager::new_keymanager;
 use oasis_core_runtime::{common::version::Version, config::Config, version_from_cargo};
 

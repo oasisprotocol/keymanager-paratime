@@ -1,8 +1,9 @@
 [package]
-name = "cipher-keymanager"
-version = "0.1.0-testnet"
+name = "keymanager"
+version = "0.2.0-testnet"
 authors = ["Oasis Protocol Foundation <info@oasisprotocol.org>"]
 edition = "2018"
+resolver = "2"
 
 [package.metadata.orc.release]
 runtime-id = "4000000000000000000000000000000000000000000000002223c5592a313de6"
@@ -20,3 +21,6 @@ debug = false
 oasis-core-runtime = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v22.1.9" }
 oasis-core-keymanager-lib = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v22.1.9" }
 oasis-core-keymanager-api-common = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v22.1.9" }
+
+# Make sure we do not upgrade past tokio 1.20.x. Later versions of Oasis Core enforce this.
+tokio = { version = "~1.20" }
