@@ -1,7 +1,8 @@
 //! The key manager ParaTime.
-use keymanager::trusted_policy_signers;
-use oasis_core_keymanager_lib::keymanager::new_keymanager;
+use oasis_core_keymanager::runtime::init::new_keymanager;
 use oasis_core_runtime::{common::version::Version, config::Config, version_from_cargo};
+
+use keymanager::{trust_root, trusted_policy_signers};
 
 /// Entrypoint.
 pub fn main() {
@@ -13,6 +14,7 @@ pub fn main() {
         init,
         Config {
             version: version_from_cargo!(),
+            trust_root: Some(trust_root()),
             ..Default::default()
         },
     );
