@@ -1213,7 +1213,7 @@ dependencies = [
 
 [[package]]
 name = "keymanager"
-version = "0.3.0-testnet"
+version = "0.3.1-testnet"
 dependencies = [
  "oasis-core-keymanager",
  "oasis-core-runtime",
@@ -1341,9 +1341,9 @@ checksum = "2dffe52ecf27772e601905b7522cb4ef790d2cc203488bbd0e2fe85fcb74566d"
 
 [[package]]
 name = "memmap2"
-version = "0.5.7"
+version = "0.5.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "95af15f345b17af2efc8ead6080fb8bc376f8cec1b35277b935637595fe77498"
+checksum = "4b182332558b18d807c4ce1ca8ca983b34c3ee32765e47b3f0f69b90355cc1dc"
 dependencies = [
  "libc",
 ]
@@ -1553,9 +1553,9 @@ dependencies = [
 
 [[package]]
 name = "oasis-cbor"
-version = "0.5.0"
+version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dae5d03ada3f2f496b1505477e91b32b9bccf1d21a8527a84b73567133c05165"
+checksum = "937dd928dca340f29f67f096760ccec7853e60ebc156175aadfc8eb203eed37d"
 dependencies = [
  "impl-trait-for-tuples",
  "oasis-cbor-derive",
@@ -1565,9 +1565,9 @@ dependencies = [
 
 [[package]]
 name = "oasis-cbor-derive"
-version = "0.5.0"
+version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bfe7107f968c18b1f384d4d92d7f5a40b655c6ae1262954b3d552b140cef8391"
+checksum = "b593c6ebad6e6429a8d1dac3509555da30311f0e6fdf93b96475bce895abef6d"
 dependencies = [
  "darling",
  "oasis-cbor-value",
@@ -1579,14 +1579,14 @@ dependencies = [
 
 [[package]]
 name = "oasis-cbor-value"
-version = "0.5.0"
+version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cbeffe8aae62d42a39195627a3f3741c0cb3679c0d3ebb87a724ceb4624374e0"
+checksum = "5fe0d7f5a7c55eba7e8e845046c6c81332f4fa4997f0ed497b9f44db1d7f2050"
 
 [[package]]
 name = "oasis-core-keymanager"
 version = "0.0.0"
-source = "git+https://github.com/oasisprotocol/oasis-core?tag=v22.2.1#751561f02d734de191dd1ad9c93d0c2cde479772"
+source = "git+https://github.com/oasisprotocol/oasis-core?branch=stable/22.2.x#8ee69609647521f5e22397b2e5ce0942cab2e5cb"
 dependencies = [
  "anyhow",
  "base64",
@@ -1610,7 +1610,7 @@ dependencies = [
 [[package]]
 name = "oasis-core-runtime"
 version = "0.0.0"
-source = "git+https://github.com/oasisprotocol/oasis-core?tag=v22.2.1#751561f02d734de191dd1ad9c93d0c2cde479772"
+source = "git+https://github.com/oasisprotocol/oasis-core?branch=stable/22.2.x#8ee69609647521f5e22397b2e5ce0942cab2e5cb"
 dependencies = [
  "anyhow",
  "arbitrary",
