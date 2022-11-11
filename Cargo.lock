@@ -1213,7 +1213,7 @@ dependencies = [
 
 [[package]]
 name = "keymanager"
-version = "0.3.1-testnet"
+version = "0.3.2-testnet"
 dependencies = [
  "oasis-core-keymanager",
  "oasis-core-runtime",
@@ -1586,7 +1586,7 @@ checksum = "5fe0d7f5a7c55eba7e8e845046c6c81332f4fa4997f0ed497b9f44db1d7f2050"
 [[package]]
 name = "oasis-core-keymanager"
 version = "0.0.0"
-source = "git+https://github.com/oasisprotocol/oasis-core?branch=stable/22.2.x#8ee69609647521f5e22397b2e5ce0942cab2e5cb"
+source = "git+https://github.com/oasisprotocol/oasis-core?branch=stable/22.2.x#b3e5523062d6ea67ade7bc4423bf21762b9e1748"
 dependencies = [
  "anyhow",
  "base64",
@@ -1610,7 +1610,7 @@ dependencies = [
 [[package]]
 name = "oasis-core-runtime"
 version = "0.0.0"
-source = "git+https://github.com/oasisprotocol/oasis-core?branch=stable/22.2.x#8ee69609647521f5e22397b2e5ce0942cab2e5cb"
+source = "git+https://github.com/oasisprotocol/oasis-core?branch=stable/22.2.x#b3e5523062d6ea67ade7bc4423bf21762b9e1748"
 dependencies = [
  "anyhow",
  "arbitrary",

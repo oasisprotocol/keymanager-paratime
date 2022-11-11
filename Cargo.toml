@@ -1,6 +1,6 @@
 [package]
 name = "keymanager"
-version = "0.3.1-testnet"
+version = "0.3.2-testnet"
 authors = ["Oasis Protocol Foundation <info@oasisprotocol.org>"]
 edition = "2018"
 resolver = "2"
