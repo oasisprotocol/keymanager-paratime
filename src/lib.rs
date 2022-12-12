@@ -18,24 +18,25 @@ pub fn trusted_policy_signers() -> TrustedPolicySigners {
     if is_testnet() {
         // Testnet.
         TrustedPolicySigners {
-            signers: {
-                let mut signers = HashSet::new();
-                signers.insert(
-                    "c37cbd0345965fda84fbaa372a01fc840b7b66eebfeb66dfdd35bb3e801f2cf3".into(),
-                );
-                signers.insert(
-                    "df8ca9fc78ce2c01f8217e8ce7aa582e8952545f412426fe07d42ca119e12166".into(),
-                );
-                signers.insert(
-                    "b27b3d0245d4cbd78be8e04e473f36abee350fcfbc438000313db1bb06117a43".into(),
-                );
-                signers
-            },
+            signers: HashSet::from([
+                "b27b3d0245d4cbd78be8e04e473f36abee350fcfbc438000313db1bb06117a43".into(),
+                "c37cbd0345965fda84fbaa372a01fc840b7b66eebfeb66dfdd35bb3e801f2cf3".into(),
+                "df8ca9fc78ce2c01f8217e8ce7aa582e8952545f412426fe07d42ca119e12166".into(),
+            ]),
             threshold: 2,
         }
     } else {
         // Mainnet.
-        panic!("key manager policy signer set not defined for Mainnet");
+        TrustedPolicySigners {
+            signers: HashSet::from([
+                "26768b7918cfef10cf2659c3da6bf7f8f76e216257ab08e966c698b95d01e40d".into(),
+                "2b9d615eb3e8f2ca46e908575bfe6bab0d9f9aadd47af06c40a9d195c4c41a45".into(),
+                "4b7ff0a68daf4ef3d8e6d6a277358fab582f55761c1ae028d9d7cb20883b3520".into(),
+                "982226ad74da8ef2502a8204f07dc8e2ad4245646b6fb146a4c8eaf3410c2b29".into(),
+                "ef6dd40d7dea169885c002957b2fc6d29bc474ff3cdb59360f16f90bf6dd1c71".into(),
+            ]),
+            threshold: 3,
+        }
     }
 }
 
@@ -51,6 +52,13 @@ pub fn trust_root() -> TrustRoot {
                 .to_string(),
         }
     } else {
-        panic!("key manager trust root not defined for Mainnet");
+        // Mainnet.
+        TrustRoot {
+            height: 11626206,
+            hash: "9296228ddd54285a3488583cd6793c209003110af071c524b9432f00fa6e2db5".into(),
+            runtime_id: "4000000000000000000000000000000000000000000000008c5ea5e49b4bc9ac".into(),
+            chain_context: "b11b369e0da5bb230b220127f5e7b242d385ef8c6f54906243f30af63c815535"
+                .to_string(),
+        }
     }
 }

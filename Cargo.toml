@@ -1,12 +1,12 @@
 [package]
 name = "keymanager"
-version = "0.3.2-testnet"
+version = "0.3.2"
 authors = ["Oasis Protocol Foundation <info@oasisprotocol.org>"]
 edition = "2018"
 resolver = "2"
 
 [package.metadata.orc.release]
-runtime-id = "4000000000000000000000000000000000000000000000002223c5592a313de6"
+runtime-id = "4000000000000000000000000000000000000000000000008c5ea5e49b4bc9ac"
 
 [package.metadata.orc.test]
 runtime-id = "4000000000000000000000000000000000000000000000004a1a53dff2ae482d"
@@ -18,6 +18,5 @@ threads = 6
 debug = false
 
 [dependencies]
-# TODO: Switch to tag v22.2.2 once released.
-oasis-core-runtime = { git = "https://github.com/oasisprotocol/oasis-core", branch = "stable/22.2.x" }
-oasis-core-keymanager = { git = "https://github.com/oasisprotocol/oasis-core", branch = "stable/22.2.x" }
+oasis-core-runtime = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v22.2.3" }
+oasis-core-keymanager = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v22.2.3" }
