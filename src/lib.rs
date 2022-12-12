@@ -27,7 +27,16 @@ pub fn trusted_policy_signers() -> TrustedPolicySigners {
         }
     } else {
         // Mainnet.
-        panic!("key manager policy signer set not defined for Mainnet");
+        TrustedPolicySigners {
+            signers: HashSet::from([
+                "26768b7918cfef10cf2659c3da6bf7f8f76e216257ab08e966c698b95d01e40d".into(),
+                "2b9d615eb3e8f2ca46e908575bfe6bab0d9f9aadd47af06c40a9d195c4c41a45".into(),
+                "4b7ff0a68daf4ef3d8e6d6a277358fab582f55761c1ae028d9d7cb20883b3520".into(),
+                "982226ad74da8ef2502a8204f07dc8e2ad4245646b6fb146a4c8eaf3410c2b29".into(),
+                "ef6dd40d7dea169885c002957b2fc6d29bc474ff3cdb59360f16f90bf6dd1c71".into(),
+            ]),
+            threshold: 3,
+        }
     }
 }
 
@@ -43,6 +52,13 @@ pub fn trust_root() -> TrustRoot {
                 .to_string(),
         }
     } else {
-        panic!("key manager trust root not defined for Mainnet");
+        // Mainnet.
+        TrustRoot {
+            height: 11626206,
+            hash: "9296228ddd54285a3488583cd6793c209003110af071c524b9432f00fa6e2db5".into(),
+            runtime_id: "4000000000000000000000000000000000000000000000008c5ea5e49b4bc9ac".into(),
+            chain_context: "b11b369e0da5bb230b220127f5e7b242d385ef8c6f54906243f30af63c815535"
+                .to_string(),
+        }
     }
 }
