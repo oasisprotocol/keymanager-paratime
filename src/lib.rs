@@ -54,8 +54,8 @@ pub fn trust_root() -> TrustRoot {
     } else {
         // Mainnet.
         TrustRoot {
-            height: 11626206,
-            hash: "9296228ddd54285a3488583cd6793c209003110af071c524b9432f00fa6e2db5".into(),
+            height: 12282779,
+            hash: "c132606dc870fbf386cb7a84f8fb033c4911f8dd0b235efa22219b2c6cf7bf35".into(),
             runtime_id: "4000000000000000000000000000000000000000000000008c5ea5e49b4bc9ac".into(),
             chain_context: "b11b369e0da5bb230b220127f5e7b242d385ef8c6f54906243f30af63c815535"
                 .to_string(),
