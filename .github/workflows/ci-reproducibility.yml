@@ -25,14 +25,14 @@ jobs:
         id: build-1
         uses: oasisprotocol/oasis-sdk/.github/actions/hash-rust@main
         with:
-          image: oasisprotocol/runtime-builder:main
+          image: ghcr.io/oasisprotocol/runtime-builder:main
           binaries: keymanager
 
       - name: Build runtime, 2.
         id: build-2
         uses: oasisprotocol/oasis-sdk/.github/actions/hash-rust@main
         with:
-          image: oasisprotocol/runtime-builder:main
+          image: ghcr.io/oasisprotocol/runtime-builder:main
           binaries: keymanager
 
       - name: Check binary equality
@@ -51,7 +51,7 @@ jobs:
         id: build-1
         uses: oasisprotocol/oasis-sdk/.github/actions/hash-rust@main
         with:
-          image: oasisprotocol/runtime-builder:main
+          image: ghcr.io/oasisprotocol/runtime-builder:main
           binaries: keymanager.sgxs
           sgx: yes
 
@@ -59,7 +59,7 @@ jobs:
         id: build-2
         uses: oasisprotocol/oasis-sdk/.github/actions/hash-rust@main
         with:
-          image: oasisprotocol/runtime-builder:main
+          image: ghcr.io/oasisprotocol/runtime-builder:main
           binaries: keymanager.sgxs
           sgx: yes
 

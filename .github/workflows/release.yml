@@ -28,7 +28,7 @@ jobs:
         id: build-elf
         uses: oasisprotocol/oasis-sdk/.github/actions/hash-rust@main
         with:
-          image: oasisprotocol/runtime-builder:main
+          image: ghcr.io/oasisprotocol/runtime-builder:main
           binaries: keymanager
           clean: no
 
@@ -36,7 +36,7 @@ jobs:
         id: build-sgxs
         uses: oasisprotocol/oasis-sdk/.github/actions/hash-rust@main
         with:
-          image: oasisprotocol/runtime-builder:main
+          image: ghcr.io/oasisprotocol/runtime-builder:main
           binaries: keymanager.sgxs
           clean: no
           sgx: yes
