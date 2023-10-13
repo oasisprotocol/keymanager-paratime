@@ -45,10 +45,10 @@ pub fn trust_root() -> TrustRoot {
     if is_testnet() {
         // Testnet.
         TrustRoot {
-            height: 13670553,
-            hash: "7e0e12dcdaa9e8a83e27799c03c873a0a2fc720bcef044992578a936ac7da2a2".into(),
+            height: 17765986,
+            hash: "f1aac30d7f30728211070dadce4ace0728bb8edbfd06462cdae56cbd9dc25088".into(),
             runtime_id: "4000000000000000000000000000000000000000000000004a1a53dff2ae482d".into(),
-            chain_context: "50304f98ddb656620ea817cc1446c401752a05a249b36c9b90dba4616829977a"
+            chain_context: "0b91b8e4e44b2003a7c5e23ddadb5e14ef5345c0ebcb3ddcae07fa2f244cab76"
                 .to_string(),
         }
     } else {
