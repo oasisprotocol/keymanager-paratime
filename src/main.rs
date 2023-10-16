@@ -21,6 +21,7 @@ pub fn main() {
                 key_manager_master_secret_rotation: true,
                 ..Default::default()
             }),
+            freshness_proofs: true,
             ..Default::default()
         },
     );
