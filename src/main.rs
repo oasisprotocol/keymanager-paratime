@@ -1,6 +1,8 @@
 //! The key manager ParaTime.
 use oasis_core_keymanager::runtime::init::new_keymanager;
-use oasis_core_runtime::{common::version::Version, config::Config, version_from_cargo};
+use oasis_core_runtime::{
+    common::version::Version, config::Config, types::Features, version_from_cargo,
+};
 
 use keymanager::{trust_root, trusted_policy_signers};
 
@@ -15,6 +17,10 @@ pub fn main() {
         Config {
             version: version_from_cargo!(),
             trust_root: Some(trust_root()),
+            features: Some(Features {
+                key_manager_master_secret_rotation: true,
+                ..Default::default()
+            }),
             ..Default::default()
         },
     );
