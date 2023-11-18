@@ -1,6 +1,6 @@
 [package]
 name = "keymanager"
-version = "0.3.3"
+version = "0.3.4"
 authors = ["Oasis Protocol Foundation <info@oasisprotocol.org>"]
 edition = "2018"
 resolver = "2"
@@ -18,5 +18,7 @@ threads = 6
 debug = false
 
 [dependencies]
-oasis-core-runtime = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v22.2.5" }
-oasis-core-keymanager = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v22.2.5" }
+# NOTE: Revision c4d5b836221ccc5aeaf81abd2d1fdec8facd571c is stable/22.2.x that includes oasis-core#5432 which is needed
+#       to better handle the key manager upgrade to 0.4.x.
+oasis-core-runtime = { git = "https://github.com/oasisprotocol/oasis-core", rev = "c4d5b836221ccc5aeaf81abd2d1fdec8facd571c" }
+oasis-core-keymanager = { git = "https://github.com/oasisprotocol/oasis-core", rev = "c4d5b836221ccc5aeaf81abd2d1fdec8facd571c" }
