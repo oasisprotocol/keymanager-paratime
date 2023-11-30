@@ -1182,7 +1182,7 @@ dependencies = [
 
 [[package]]
 name = "keymanager"
-version = "0.4.1-testnet"
+version = "0.4.1"
 dependencies = [
  "oasis-core-keymanager",
  "oasis-core-runtime",
