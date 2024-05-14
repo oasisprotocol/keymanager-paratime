@@ -1,6 +1,6 @@
 [package]
 name = "keymanager"
-version = "0.4.1"
+version = "0.5.0-testnet"
 authors = ["Oasis Protocol Foundation <info@oasisprotocol.org>"]
 edition = "2021"
 resolver = "2"
@@ -12,11 +12,11 @@ runtime-id = "4000000000000000000000000000000000000000000000008c5ea5e49b4bc9ac"
 runtime-id = "4000000000000000000000000000000000000000000000004a1a53dff2ae482d"
 
 [package.metadata.fortanix-sgx]
-heap-size = 268435456 # 256 MiB
+heap-size = 536870912 # 512 MiB
 stack-size = 2097152
-threads = 8
+threads = 26
 debug = false
 
 [dependencies]
-oasis-core-runtime = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v23.0.1" }
-oasis-core-keymanager = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v23.0.1" }
+oasis-core-runtime = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v24.0" }
+oasis-core-keymanager = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v24.0" }

@@ -1,7 +1,7 @@
 //! The Cipher key manager.
 use std::collections::HashSet;
 
-use oasis_core_keymanager::policy::TrustedPolicySigners;
+use oasis_core_keymanager::policy::TrustedSigners;
 use oasis_core_runtime::consensus::verifier::TrustRoot;
 
 /// Determine whether the build is for Testnet.
@@ -14,10 +14,10 @@ const fn is_testnet() -> bool {
 }
 
 /// Trusted key manager policy signer set.
-pub fn trusted_policy_signers() -> TrustedPolicySigners {
+pub fn trusted_policy_signers() -> TrustedSigners {
     if is_testnet() {
         // Testnet.
-        TrustedPolicySigners {
+        TrustedSigners {
             signers: HashSet::from([
                 "b27b3d0245d4cbd78be8e04e473f36abee350fcfbc438000313db1bb06117a43".into(),
                 "c37cbd0345965fda84fbaa372a01fc840b7b66eebfeb66dfdd35bb3e801f2cf3".into(),
@@ -27,7 +27,7 @@ pub fn trusted_policy_signers() -> TrustedPolicySigners {
         }
     } else {
         // Mainnet.
-        TrustedPolicySigners {
+        TrustedSigners {
             signers: HashSet::from([
                 "26768b7918cfef10cf2659c3da6bf7f8f76e216257ab08e966c698b95d01e40d".into(),
                 "2b9d615eb3e8f2ca46e908575bfe6bab0d9f9aadd47af06c40a9d195c4c41a45".into(),
@@ -45,8 +45,8 @@ pub fn trust_root() -> TrustRoot {
     if is_testnet() {
         // Testnet.
         TrustRoot {
-            height: 17765986,
-            hash: "f1aac30d7f30728211070dadce4ace0728bb8edbfd06462cdae56cbd9dc25088".into(),
+            height: 21135326,
+            hash: "af3b54e6aed1549df7a4ae2a0903cb5f4e94589fc59dc57ea86aa5bdf47150fd".into(),
             runtime_id: "4000000000000000000000000000000000000000000000004a1a53dff2ae482d".into(),
             chain_context: "0b91b8e4e44b2003a7c5e23ddadb5e14ef5345c0ebcb3ddcae07fa2f244cab76"
                 .to_string(),
