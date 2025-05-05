@@ -22,7 +22,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: "1.22.x"
+          go-version: "1.24.x"
 
       - name: Build tagged release, elf
         id: build-elf
@@ -46,6 +46,7 @@ jobs:
           go install github.com/oasisprotocol/oasis-sdk/tools/orc@latest
 
           orc init ${KEYMANAGER_EXECUTABLE} --sgx-executable ${KEYMANAGER_SGXS} --output keymanager.orc
+          orc sgx-set-sig keymanager.orc
         env:
           KEYMANAGER_EXECUTABLE: ${{ github.workspace }}/${{ steps.build-elf.outputs.build-path }}/keymanager
           KEYMANAGER_SGXS: ${{ github.workspace }}/${{ steps.build-sgxs.outputs.build-path }}/keymanager.sgxs
@@ -53,7 +54,6 @@ jobs:
       - name: Publish the release
         uses: ncipollo/release-action@v1
         with:
-          # Create a draft since the release requires an offline signing process.
           draft: true
           artifacts: keymanager.orc
           token: ${{ secrets.GITHUB_TOKEN }}
