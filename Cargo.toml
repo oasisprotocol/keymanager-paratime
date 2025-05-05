@@ -1,6 +1,6 @@
 [package]
 name = "keymanager"
-version = "0.5.0"
+version = "0.6.0-testnet"
 authors = ["Oasis Protocol Foundation <info@oasisprotocol.org>"]
 edition = "2021"
 resolver = "2"
@@ -18,5 +18,5 @@ threads = 26
 debug = false
 
 [dependencies]
-oasis-core-runtime = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v24.0" }
-oasis-core-keymanager = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v24.0" }
+oasis-core-runtime = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v25.2" }
+oasis-core-keymanager = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v25.2" }
