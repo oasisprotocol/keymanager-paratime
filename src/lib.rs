@@ -45,8 +45,8 @@ pub fn trust_root() -> TrustRoot {
     if is_testnet() {
         // Testnet.
         TrustRoot {
-            height: 26459321,
-            hash: "b47322f422b247c210dc5868a40b791837c5c7b42974bc2de38feddfc98a67c7".into(),
+            height: 32000000,
+            hash: "1584e2f8ef4262ad920fb4adeb3d6b8b3369196c75d8f69ffac304c9e97aa08b".into(),
             runtime_id: "4000000000000000000000000000000000000000000000004a1a53dff2ae482d".into(),
             chain_context: "0b91b8e4e44b2003a7c5e23ddadb5e14ef5345c0ebcb3ddcae07fa2f244cab76"
                 .to_string(),
