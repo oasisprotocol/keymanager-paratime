@@ -1290,7 +1290,7 @@ dependencies = [
 
 [[package]]
 name = "keymanager"
-version = "0.7.0-testnet"
+version = "0.7.0"
 dependencies = [
  "oasis-core-keymanager",
  "oasis-core-runtime",
